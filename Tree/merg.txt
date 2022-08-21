@@ -1,0 +1,22 @@
+public static <AnyType> BinaryTree<AnyType> merge2(AnyType item, BinaryTree<AnyType> t1, BinaryTree<AnyType> t2){
+    BinaryNode<AnyType> mergeNode;
+
+    if(t1 == null && t2 == null)
+        return new BinaryTree<AnyType>(item);
+
+    if(t1 != null && t2 != null){
+        BinaryNode<AnyType> dup1 = duplicate(t1.getRoot());
+        BinaryNode<AnyType> dup2 = duplicate(t2.getRoot());
+
+        mergeNode = new BinaryNode<AnyType>(item, dup1, dup2);
+
+    }else if(t1 != null){
+        BinaryNode<AnyType> dup1 = duplicate(t1.getRoot());
+        mergeNode = new BinaryNode<AnyType>(item, dup1, null);
+    }else{
+        BinaryNode<AnyType> dup2 = duplicate(t2.getRoot());
+        mergeNode = new BinaryNode<AnyType>(item, null, dup2);
+    }
+
+    return new BinaryTree<>(mergeNode);
+}

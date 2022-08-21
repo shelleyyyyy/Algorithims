@@ -1,0 +1,9 @@
+
+Help Recieved: 
+
+Discussed with Cameron Miller, and Cole Corson
+
+TextBook, in class notes/code
+
+Looked at some of Cole Corson's code on the quadratic probing class 
+because I coppied some parts down wrong in class
